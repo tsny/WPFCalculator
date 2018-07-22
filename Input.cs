@@ -1,54 +1,64 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CSharpCalculator
 {
-    class Input
+    class Input 
     {
         public bool HasDecimal
         {
             get
             {
-                return stringValue.ToString().Contains(".");
+                return StringValue.ToString().Contains(".");
             }
         }
         public bool HasDefaultValue
         {
             get
             {
-                return stringValue == "0";
+                return StringValue == "0";
             }
         }
 
-        public string stringValue = "0";
-        public float floatValue = 0;
+        public string StringValue { get; set; } = "0";
 
         public void AddDecimal()
         {
             if (HasDecimal) return;
 
-            stringValue += ".";
+            StringValue += ".";
         }
 
         public void AddDigit(int digit)
         {
-            if (stringValue == "0" && digit == 0) return;
+            if (StringValue == "0" && digit == 0) return;
 
-            if (stringValue == "0")
+            if (StringValue == "0")
             {
-                stringValue = digit.ToString();
+                StringValue = digit.ToString();
                 return;
             }
 
-            stringValue += digit.ToString();
+            StringValue += digit.ToString();
         }
 
         public void Negate()
         {
-            floatValue = -floatValue;
+            if (StringValue == "0") return;
+
+            if (StringValue[0].Equals('-'))
+            {
+                StringValue = StringValue.Substring(1);
+            }
+
+            else
+            {
+                StringValue = "-" + StringValue;
+            }
         }
     }
 }

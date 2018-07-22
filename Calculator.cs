@@ -20,7 +20,7 @@ namespace CSharpCalculator
         public Input currentInput;
         public Input previousInput;
 
-        public Operand currentOperand;
+        public Operand? currentOperand;
 
         public bool HasInput
         {
@@ -61,6 +61,11 @@ namespace CSharpCalculator
             {
                 Clear();
                 return;
+            }
+
+            if (input.Equals("±"))
+            {
+                currentInput.Negate();
             }
         }
 

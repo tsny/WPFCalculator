@@ -27,5 +27,6 @@
         <Button Content="C" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
 
         <TextBlock x:Name="InputBox" HorizontalAlignment="Left" Margin="10,10,0,0" Text="0" VerticalAlignment="Top" Height="49" Width="310" FontSize="20" FontStretch="Condensed" TextWrapping="WrapWithOverflow"/>
+        <Button Content="±" HorizontalAlignment="Left" Margin="188,150,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
     </Grid>
 </Window>
