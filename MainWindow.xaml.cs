@@ -26,6 +26,12 @@ namespace CSharpCalculator
         {
             calculator = new Calculator();
             InitializeComponent();
+            UpdateInputBox();
+        }
+
+        private void UpdateInputBox()
+        {
+            InputBox.Text = calculator.currentInput.StringValue;
         }
 
         private void DigitClick(Object sender, RoutedEventArgs e)
@@ -34,8 +40,18 @@ namespace CSharpCalculator
 
             if (button == null) return;
 
-            calculator.InputDigit(float.Parse(button.Content.ToString()));
-            InputBox.Text = calculator.currentInput.ToString();
+            calculator.currentInput.AddDigit(int.Parse(button.Content.ToString()));
+            UpdateInputBox();
+        }
+
+        private void DecimalClick(object sender, RoutedEventArgs e)
+        {
+            calculator.currentInput.AddDecimal();
+        }
+
+        private void ClearClick(object sender, RoutedEventArgs e)
+        {
+            calculator.Clear();
         }
     }
 }

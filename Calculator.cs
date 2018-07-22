@@ -17,33 +17,34 @@ namespace CSharpCalculator
 
     class Calculator
     {
-        public string inputString;
-
-        public float previousInput;
-        public float currentInput = 0;
+        public Input currentInput;
+        public Input previousInput;
 
         public Operand currentOperand;
 
-        public bool currentInputHasDecimal;
-        public bool hasInput;
-
-        public void InputDigit(float digit)
+        public bool HasInput
         {
-            inputString += digit;
-            currentInput = float.Parse(inputString);
+            get
+            {
+                return currentInput.HasDefaultValue == false;
+            }
         }
 
-        public void InputDecimal()
+        public Calculator()
         {
-            if (currentInputHasDecimal) return;
+            currentInput = new Input();
+        }
 
-            inputString += ".";
-            currentInputHasDecimal = true;
+        public void Clear()
+        {
+            currentInput = new Input();
+            previousInput = null;
         }
 
         public void InputOperand(Operand operand)
         {
-
+            previousInput = currentInput;
+            currentOperand = operand;
         }
     }
 }

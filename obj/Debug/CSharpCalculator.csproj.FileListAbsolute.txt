@@ -1,0 +1,15 @@
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\bin\Debug\CSharpCalculator.exe.config
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\bin\Debug\CSharpCalculator.exe
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\bin\Debug\CSharpCalculator.pdb
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator.csprojAssemblyReference.cache
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\MainWindow.g.cs
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\App.g.cs
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator_MarkupCompile.cache
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator_MarkupCompile.lref
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\MainWindow.baml
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator.g.resources
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator.Properties.Resources.resources
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator.csproj.GenerateResource.cache
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator.csproj.CoreCompileInputs.cache
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator.exe
+C:\Users\tsny7\Developer\CSharpCalculator\CSharpCalculator\obj\Debug\CSharpCalculator.pdb

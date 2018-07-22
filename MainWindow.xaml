@@ -5,25 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="274.5" Width="220.333">
+        Title="Calculator" Height="288.533" Width="337.666">
     <Grid>
         <Button Content="1" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
         <Button Content="2" HorizontalAlignment="Left" Margin="59,64,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
         <Button Content="3" HorizontalAlignment="Left" Margin="108,64,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
-        <Button Content="4" HorizontalAlignment="Left" Margin="157,64,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
-        <Button Content="5" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
-        <Button Content="6" HorizontalAlignment="Left" Margin="59,107,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
-        <Button Content="7" HorizontalAlignment="Left" Margin="108,107,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="157,107,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,151,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="59,151,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="108,151,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="157,151,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="108,194,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="157,194,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="59,194,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
-        <TextBlock x:Name="InputBox" HorizontalAlignment="Left" Margin="10,10,0,0" Text="TextBlock" VerticalAlignment="Top" Height="49" Width="191" FontSize="20"/>
+        <Button Content="4" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
+        <Button Content="5" HorizontalAlignment="Left" Margin="59,107,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
+        <Button Content="6" HorizontalAlignment="Left" Margin="108,107,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
+        <Button Content="7" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
+        <Button Content="8" HorizontalAlignment="Left" Margin="59,150,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
+        <Button Content="9" HorizontalAlignment="Left" Margin="108,150,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
+        <Button Content="0" HorizontalAlignment="Left" Margin="59,193,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DigitClick"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="209,64,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
+        <Button Content="-" HorizontalAlignment="Left" Margin="258,64,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
+        <Button Content="+" HorizontalAlignment="Left" Margin="172,107,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
+        <Button Content="*" HorizontalAlignment="Left" Margin="270,107,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
+        <Button Content="=" HorizontalAlignment="Left" Margin="221,201,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
+        <Button Content="/" HorizontalAlignment="Left" Margin="221,107,0,0" VerticalAlignment="Top" Width="44" Height="38"/>
+        <TextBlock x:Name="InputBox" HorizontalAlignment="Left" Margin="10,10,0,0" Text="0" VerticalAlignment="Top" Height="49" Width="310" FontSize="20" FontStretch="Condensed" TextWrapping="WrapWithOverflow"/>
+        <Button Content="." HorizontalAlignment="Left" Margin="108,193,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="DecimalClick"/>
+        <Button Content="C" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" Width="44" Height="38" Click="ClearClick"/>
 
     </Grid>
 </Window>
