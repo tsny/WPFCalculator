@@ -35,6 +35,35 @@ namespace CSharpCalculator
             currentInput = new Input();
         }
 
+        public void ParseInput(String input)
+        {
+            int result;
+
+            if (int.TryParse(input, out result))
+            {
+                currentInput.AddDigit(result);
+                return;
+            }
+
+            if (input.Equals("0"))
+            {
+                currentInput.AddDigit(0);
+                return;
+            }
+
+            if (input.Equals("."))
+            {
+                currentInput.AddDecimal();
+                return;
+            }
+
+            if (input.Equals("C"))
+            {
+                Clear();
+                return;
+            }
+        }
+
         public void Clear()
         {
             currentInput = new Input();

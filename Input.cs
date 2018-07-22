@@ -8,69 +8,47 @@ namespace CSharpCalculator
 {
     class Input
     {
-        public float FloatValue { get; set; }
-
-        public string StringValue
-        {
-            get
-            {
-                return FloatValue.ToString("R");
-            }
-
-            set
-            {
-                stringValue = value;
-                FloatValue = float.Parse(value);
-            }
-        }
-
         public bool HasDecimal
         {
             get
             {
-                return StringValue.ToString().Contains(".");
+                return stringValue.ToString().Contains(".");
             }
         }
         public bool HasDefaultValue
         {
             get
             {
-                return StringValue == "0";
+                return stringValue == "0";
             }
         }
 
-        private string stringValue;
-
-        public Input()
-        {
-            FloatValue = 0;
-        }
+        public string stringValue = "0";
+        public float floatValue = 0;
 
         public void AddDecimal()
         {
             if (HasDecimal) return;
 
-            StringValue += ".";
+            stringValue += ".";
         }
 
         public void AddDigit(int digit)
         {
-            if (FloatValue == 0 && digit == 0) return;
+            if (stringValue == "0" && digit == 0) return;
 
-            if (digit == 0)
+            if (stringValue == "0")
             {
-                StringValue = digit.ToString();
+                stringValue = digit.ToString();
+                return;
             }
 
-            else
-            {
-                StringValue += digit.ToString();
-            }
+            stringValue += digit.ToString();
         }
 
         public void Negate()
         {
-            FloatValue = -FloatValue;
+            floatValue = -floatValue;
         }
     }
 }
