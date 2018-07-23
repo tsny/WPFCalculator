@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,21 +7,13 @@ using System.Threading.Tasks;
 
 namespace CSharpCalculator
 {
-    public enum Operand
-    {
-        addition,
-        subtraction, 
-        multiplication,
-        division,
-        power
-    }
 
     class Calculator
     {
         public Input currentInput;
         public Input previousInput;
 
-        public Operand? currentOperand;
+        public char currentOperand;
 
         public bool HasInput
         {
@@ -45,27 +38,36 @@ namespace CSharpCalculator
                 return;
             }
 
-            if (input.Equals("0"))
+            switch (input)
             {
-                currentInput.AddDigit(0);
-                return;
-            }
+                case "0":
+                    currentInput.AddDigit(0);
+                    break;
 
-            if (input.Equals("."))
-            {
-                currentInput.AddDecimal();
-                return;
-            }
+                case ".":
+                    currentInput.AddDecimal();
+                    break;
 
-            if (input.Equals("C"))
-            {
-                Clear();
-                return;
-            }
+                case "C":
+                    Clear();
+                    break;
 
-            if (input.Equals("±"))
-            {
-                currentInput.Negate();
+                case "±":
+                    currentInput.Negate();
+                    break;
+
+                case "=":
+                    Calculate();
+                    break;
+
+                // Operands
+
+                case "/":
+                case "*":
+                case "+":
+                case "-":
+                    InputOperand(input[0]);
+                    break;
             }
         }
 
@@ -75,10 +77,71 @@ namespace CSharpCalculator
             previousInput = null;
         }
 
-        public void InputOperand(Operand operand)
+        public void ClearEntry()
         {
+            currentInput = new Input();
+        }
+
+        public void InputOperand(char operand)
+        {
+            if (previousInput != null)
+            {
+                Calculate();
+            }
+
             previousInput = currentInput;
+            currentInput = new Input();
             currentOperand = operand;
+        }
+
+        private void Calculate()
+        {
+            if (previousInput == null) return;
+
+            currentInput.StringValue = ParseOperand().ToString();
+
+            previousInput = null;
+        }
+
+        private float ParseOperand()
+        {
+            switch (currentOperand)
+            {
+                case '+':
+                    return Addition();
+
+                case '-':
+                    return Subtraction();
+
+                case '*':
+                    return Multiplication();
+
+                case '/':
+                    return Division();
+
+                default:
+                    return 0;
+            }
+        }
+
+        private float Addition()
+        {
+            return currentInput.GetFloatValue() + previousInput.GetFloatValue();
+        }
+
+        private float Subtraction()
+        {
+            return currentInput.GetFloatValue() - previousInput.GetFloatValue();
+        }
+
+        private float Multiplication()
+        {
+            return currentInput.GetFloatValue() * previousInput.GetFloatValue();
+        }
+
+        private float Division()
+        {
+            return currentInput.GetFloatValue() / previousInput.GetFloatValue();
         }
     }
 }

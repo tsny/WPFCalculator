@@ -46,6 +46,11 @@ namespace CSharpCalculator
             StringValue += digit.ToString();
         }
 
+        public float GetFloatValue()
+        {
+            return float.Parse(StringValue);
+        }
+
         public void Negate()
         {
             if (StringValue == "0") return;
